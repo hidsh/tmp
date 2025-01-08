@@ -5,7 +5,7 @@
 sudo nano /etc/nixos/configuration.nix
 --
     :
-  # Enable OpenSSH daemon
+   # Enable OpenSSH daemon
    services.openssh.enable = true;
    services.openssh.permitRootLogin = "no";
    services.openssh.passwordAuthentication = true;
@@ -15,7 +15,7 @@ sudo nano /etc/nixos/configuration.nix
 --
 
 sudo nixos-rebuild switch
-sudo systemctl sshd status   # confirm running
+sudo systemctl status sshd   # confirm running
 
 # connect from other hosts
 ssh me@192.168.xx.xx
